@@ -10,8 +10,8 @@ Suggestions: If you are not good at coding then you raise your ideas by opening 
 Credentials: If you need to add some more credentials or references, feel free to share for adding some!
 
 # Instructions
-Make the repositary to be shared publicly.
-Have a clone of the public repositary and make it secured properly.
-Make sure of pull requests are merged or not or wait until it merges.
-Add contributions or ideas
-Commit changes and push it carefully and with proper purpose.
+1. Make the repositary to be shared publicly.
+2. Have a clone of the public repositary and make it secured properly.
+3. Make sure of pull requests are merged or not or wait until it merges.
+4. Add contributions or ideas
+5. Commit changes and push it carefully and with proper purpose.
