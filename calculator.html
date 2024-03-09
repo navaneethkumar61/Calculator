@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+<title>calculator</title>
+<style>
+body{
+background-image: url('math.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+margin: 5%;
+}
+table{
+margin-left: auto;
+margin-right: auto;
+border: 3px solid black;
+background-color: white;
+padding: 10px;
+}
+input[type="text"]{
+text-align: right;
+width: 380px;
+height: 40px;
+outline: none;
+font-size: 40px;
+margin: auto;
+display: flex;
+color:black;
+padding: 3px 6px;
+}
+input[type="button"]{
+background-color: gray;
+color: white;
+cursor: pointer;
+position: relative;
+width: 70px;
+padding: 2px;
+font-size: 18px;
+transition: 0.5s;
+height: 50px;
+}
+input[type='button']:hover{
+background-color: black;
+color: white;
+}
+</style>
+</head>
+<body>
+<script>
+function solve(val){
+var v = document.getElementsByClassName('res')[0];
+if (val === '^'){
+v.value += '**'; 
+} 
+else {
+v.value += val;
+}
+}
+function result() {
+var num1 = document.getElementsByClassName('res')[0].value;
+var num2 = eval(num1);
+document.getElementsByClassName('res')[0].value = num2;
+}
+function clearInput() {
+var inp = document.getElementsByClassName('res')[0];
+inp.value = '';
+}
+function back() {
+var ev = document.getElementsByClassName('res')[0];
+ev.value = ev.value.slice(0, -1);
+}
+</script>
+
+<table class="cal"cellpadding="5" cellspacing="5">
+<div class="base">
+<tr>
+<td colspan="4">
+<input type="text" class="res">
+</td>
+</tr>
+<div class="info">
+<tr>
+<td><input type="button" value="AC" onclick="clearInput()"></td>
+<td><input type="button" value="DEL" onclick="back()"></td>
+<td><input type="button" value="^" onclick="solve('^')"></td>
+<td><input type="button" value="/" onclick="solve('/')"></td>
+</tr>
+<tr>
+<td><input type="button" value="7" onclick="solve('7')"></td>
+<td><input type="button" value="8" onclick="solve('8')"></td>
+<td><input type="button" value="9" onclick="solve('9')"></td>
+<td><input type="button" value="X" onclick="solve('*')"></td>
+</tr>
+<tr>
+<td><input type="button" value="4" onclick="solve('4')"></td>
+<td><input type="button" value="5" onclick="solve('5')"></td>
+<td><input type="button" value="6" onclick="solve('6')"></td>
+<td><input type="button" value="-" onclick="solve('-')"></td>
+</tr>
+<tr>
+<td><input type="button" value="1" onclick="solve('1')"></td>
+<td><input type="button" value="2" onclick="solve('2')"></td>
+<td><input type="button" value="3" onclick="solve('3')"></td>
+<td><input type="button" value="+" onclick="solve('+')"></td>
+</tr>
+<tr>
+<td><input type="button" value="." onclick="solve('.')"></td>
+<td><input type="button" value="0" onclick="solve('0')"></td>
+<td><input type="button" value="%" onclick="solve('%')"></td>
+<td><input type="button" value="=" onclick="result()"></td>
+</tr>
+</div>
+</div>
+</table>
+</body>
