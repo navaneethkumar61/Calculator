@@ -1,4 +1,4 @@
-## Calculator
+# Calculator
 # Description
 Welcome to our project! This application is developed using HTML, CSS, and JavaScript languages to facilitate understanding of fundamental mathematical operations. Additionally, it incorporates keyboard functionality, allowing users to perform operations not only via mouse or touchpad but also through keyboard inputs.
 
